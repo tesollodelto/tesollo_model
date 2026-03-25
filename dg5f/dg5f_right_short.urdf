@@ -48,7 +48,7 @@
   <joint name="rj_dg_base" type="fixed">
       <parent link="rl_dg_mount"/>
       <child link="rl_dg_base"/>
-      <origin rpy="0 0 0" xyz="0 0 0.004"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0045"/>
   </joint>
 
   <link name="rl_dg_palm">
@@ -71,7 +71,7 @@
   <joint name="rj_dg_palm" type="fixed">
       <parent link="rl_dg_base"/>
       <child link="rl_dg_palm"/>
-      <origin rpy="0 0 0" xyz="0 0 0.0698"/>
+      <origin rpy="0 0 0" xyz="0 0 0.022"/>
   </joint>
 
   <link name="rl_dg_1_1">
