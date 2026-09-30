@@ -1,0 +1,94 @@
+<!--
+    dg3f_m.xml
+    Licensed under the BSD-3-Clause
+    Copyright (c) 2019-2026 Tesollo Inc.
+    See LICENSE file for details.
+
+    Reference:
+    * https://tesollo.com/dg-3f/
+-->
+<mujoco model="dg3f_m">
+  <compiler angle="radian" meshdir="meshes"/>
+  <asset>
+    <mesh name="l_dg_mount_c" content_type="model/stl" file="l_dg_mount_c.STL"/>
+    <mesh name="l_dg_base_c" content_type="model/stl" file="l_dg_base_c.STL"/>
+    <mesh name="l_1_1_c" content_type="model/stl" file="l_1_1_c.STL"/>
+    <mesh name="l_1_2_c" content_type="model/stl" file="l_1_2_c.STL"/>
+    <mesh name="l_1_3_c" content_type="model/stl" file="l_1_3_c.STL"/>
+    <mesh name="l_1_4_c" content_type="model/stl" file="l_1_4_c.STL"/>
+    <mesh name="l_1_tip_c" content_type="model/stl" file="l_1_tip_c.STL"/>
+    <mesh name="l_23_1_c" content_type="model/stl" file="l_23_1_c.STL"/>
+    <mesh name="l_23_2_c" content_type="model/stl" file="l_23_2_c.STL"/>
+    <mesh name="l_23_3_c" content_type="model/stl" file="l_23_3_c.STL"/>
+    <mesh name="l_23_4_c" content_type="model/stl" file="l_23_4_c.STL"/>
+    <mesh name="l_23_tip_c" content_type="model/stl" file="l_23_tip_c.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" mesh="l_dg_mount_c"/>
+    <geom pos="0 0 0.004" quat="1 0 0 0" type="mesh" mesh="l_dg_base_c"/>
+    <body name="l_dg_1_1" pos="0.026558 0 0.0752">
+      <inertial pos="0.0039774 -8.829e-09 0.020057" quat="0.699474 -0.103614 -0.103614 0.699474" mass="0.0493" diaginertia="1.5031e-05 1.41285e-05 3.64014e-06"/>
+      <joint name="j_dg_1_1" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-7.644 7.644"/>
+      <geom type="mesh" mesh="l_1_1_c"/>
+      <body name="l_dg_1_2" pos="0 0 0.0405">
+        <inertial pos="0.013085 -0.00032847 0.013274" quat="0.360445 0.555974 0.261049 0.702015" mass="0.0191" diaginertia="6.64801e-06 6.38469e-06 2.2331e-06"/>
+        <joint name="j_dg_1_2" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-7.644 7.644"/>
+        <geom type="mesh" mesh="l_1_2_c"/>
+        <body name="l_dg_1_3" pos="0.0242 0 0.029">
+          <inertial pos="0.015926 -0.0001838 -1.5688e-05" quat="0.040247 0.706864 -0.0386613 0.705145" mass="0.04535" diaginertia="8.39353e-06 7.78608e-06 2.65639e-06"/>
+          <joint name="j_dg_1_3" pos="0 0 0" axis="0 -1 0" range="0 2.80998" actuatorfrcrange="-7.644 7.644"/>
+          <geom type="mesh" mesh="l_1_3_c"/>
+          <body name="l_dg_1_4" pos="0.0434 0 0">
+            <inertial pos="0.0148448 0.000183678 0.00895715" quat="0.72435 0.0442086 0.0394171 0.686883" mass="0.058" diaginertia="1.61741e-05 1.4728e-05 5.43824e-06"/>
+            <joint name="j_dg_1_4" pos="0 0 0" axis="0 -1 0" range="-1.5708 1.8675" actuatorfrcrange="-7.644 7.644"/>
+            <geom type="mesh" mesh="l_1_4_c"/>
+            <geom pos="0.0313 0 0" quat="1 0 0 0" type="mesh" mesh="l_1_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="l_dg_2_1" pos="-0.013279 0.023 0.0752">
+      <inertial pos="-0.0039774 8.829e-09 0.020057" quat="0.699474 0.103614 0.103614 0.699474" mass="0.0493" diaginertia="1.5031e-05 1.41285e-05 3.64014e-06"/>
+      <joint name="j_dg_2_1" pos="0 0 0" axis="0 0 1" range="-2.1293 1.5708" actuatorfrcrange="-7.644 7.644"/>
+      <geom type="mesh" mesh="l_23_1_c"/>
+      <body name="l_dg_2_2" pos="0 0 0.0405">
+        <inertial pos="-0.013085 0.00032847 0.013274" quat="0.555974 0.360445 0.702015 0.261049" mass="0.0191" diaginertia="6.64801e-06 6.38469e-06 2.2331e-06"/>
+        <joint name="j_dg_2_2" pos="0 0 0" axis="-1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-7.644 7.644"/>
+        <geom type="mesh" mesh="l_23_2_c"/>
+        <body name="l_dg_2_3" pos="-0.0242 0 0.029">
+          <inertial pos="-0.0159259 0.000183796 -1.56883e-05" quat="0.038661 0.705145 -0.0402471 0.706864" mass="0.04535" diaginertia="8.39349e-06 7.78612e-06 2.65643e-06"/>
+          <joint name="j_dg_2_3" pos="0 0 0" axis="0 1 0" range="0 2.80998" actuatorfrcrange="-7.644 7.644"/>
+          <geom type="mesh" mesh="l_23_3_c"/>
+          <body name="l_dg_2_4" pos="-0.0434 0 0">
+            <inertial pos="-0.0112073 -0.000185111 -0.00924713" quat="0.717662 -0.10715 -0.118031 0.6779" mass="0.058" diaginertia="1.7762e-05 1.64242e-05 5.32997e-06"/>
+            <joint name="j_dg_2_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.8675" actuatorfrcrange="-7.644 7.644"/>
+            <geom type="mesh" mesh="l_23_4_c"/>
+            <geom pos="-0.0313 0 0" quat="1 0 0 0" type="mesh" mesh="l_23_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="l_dg_3_1" pos="-0.013279 -0.023 0.0752">
+      <inertial pos="-0.0039774 8.829e-09 0.020057" quat="0.699474 0.103614 0.103614 0.699474" mass="0.0493" diaginertia="1.5031e-05 1.41285e-05 3.64014e-06"/>
+      <joint name="j_dg_3_1" pos="0 0 0" axis="0 0 1" range="-1.5708 2.1293" actuatorfrcrange="-7.644 7.644"/>
+      <geom type="mesh" mesh="l_23_1_c"/>
+      <body name="l_dg_3_2" pos="0 0 0.0405">
+        <inertial pos="-0.013085 0.00032847 0.013274" quat="0.555974 0.360445 0.702015 0.261049" mass="0.0191" diaginertia="6.64801e-06 6.38469e-06 2.2331e-06"/>
+        <joint name="j_dg_3_2" pos="0 0 0" axis="-1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-7.644 7.644"/>
+        <geom type="mesh" mesh="l_23_2_c"/>
+        <body name="l_dg_3_3" pos="-0.0242 0 0.029">
+          <inertial pos="-0.0159259 0.000183796 -1.56883e-05" quat="0.038661 0.705145 -0.0402471 0.706864" mass="0.04535" diaginertia="8.39349e-06 7.78612e-06 2.65643e-06"/>
+          <joint name="j_dg_3_3" pos="0 0 0" axis="0 1 0" range="0 2.80998" actuatorfrcrange="-7.644 7.644"/>
+          <geom type="mesh" mesh="l_23_3_c"/>
+          <body name="l_dg_3_4" pos="-0.0434 0 0">
+            <inertial pos="-0.0112073 -0.000185111 -0.00924713" quat="0.717662 -0.10715 -0.118031 0.6779" mass="0.058" diaginertia="1.7762e-05 1.64242e-05 5.32997e-06"/>
+            <joint name="j_dg_3_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.8675" actuatorfrcrange="-7.644 7.644"/>
+            <geom type="mesh" mesh="l_23_4_c"/>
+            <geom pos="-0.0313 0 0" quat="1 0 0 0" type="mesh" mesh="l_23_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

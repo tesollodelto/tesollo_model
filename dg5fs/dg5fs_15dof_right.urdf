@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    dg5fs_15dof_right.urdf
+    Licensed under the BSD-3-Clause
+    Copyright (c) 2026 Tesollo Inc.
+    See LICENSE file for details.
+
+    Reference:
+    * https://tesollo.com/dg-5f/
+-->
+<robot name="dg5fs_right">
+  <link name="link_base">
+    <inertial>
+      <origin xyz="0.00104986731345823 0.00329385108194196 0.0474865939810618" rpy="0 0 0" />
+      <mass value="0.520188088868863" />
+      <inertia ixx="0.000526105157918668" ixy="4.25651318806812E-06" ixz="-1.44536253657223E-05" iyy="0.000390319533431687" iyz="-4.09399342582741E-05" izz="0.000269839996007622" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_base.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_1_1">
+    <inertial>
+      <origin xyz="2.03295583145469E-09 -0.00601221888193745 0.00795349430839352" rpy="0 0 0" />
+      <mass value="0.0198063638503371" />
+      <inertia ixx="3.1709342981377E-06" ixy="2.42591209185536E-12" ixz="1.15270302496452E-12" iyy="2.44625075775771E-06" iyz="-5.47532784070515E-07" izz="1.42561107422787E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_1" type="revolute">
+    <origin xyz="0.0017 0.018 0.0298" rpy="1.5708 0 1.5708" />
+    <parent link="link_base" />
+    <child link="link_1_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_1_2">
+    <inertial>
+      <origin xyz="0.01642 0.00029404 0.00032561" rpy="0 0 0" />
+      <mass value="0.0281" />
+      <inertia ixx="1.4191E-06" ixy="-1.7316E-07" ixz="1.2217E-07" iyy="4.2125E-06" iyz="2.6892E-09" izz="4.2756E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <origin xyz="0 0 0.0262" rpy="-1.5708 0 0" />
+    <parent link="link_1_1" />
+    <child link="link_1_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.670353755551324" upper="0" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_1_3">
+    <inertial>
+      <origin xyz="0.022063 0.00068939 0.00024956" rpy="0 0 0" />
+      <mass value="0.036661" />
+      <inertia ixx="1.7719E-06" ixy="-6.0434E-07" ixz="1.7382E-07" iyy="8.6114E-06" iyz="6.3109E-09" izz="8.4364E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_3" type="revolute">
+    <origin xyz="0.0381 0 0" rpy="1.5708 0 0" />
+    <parent link="link_1_2" />
+    <child link="link_1_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_1_tip">
+    <inertial>
+      <origin xyz="0.0071686 0.0037705 1.6943E-08" rpy="0 0 0" />
+      <mass value="0.0021025" />
+      <inertia ixx="5.5581E-08" ixy="5.958E-09" ixz="-8.9371E-13" iyy="8.5977E-08" iyz="-7.1847E-14" izz="5.2859E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_1_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_tip" type="fixed">
+    <origin xyz="0.03866 0.0034211 0" rpy="0 0 0.62832" />
+    <parent link="link_1_3" />
+    <child link="link_1_tip" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="link_2_1">
+    <inertial>
+      <origin xyz="0.0198782124274925 0.000277091705545254 0.000891766696284673" rpy="0 0 0" />
+      <mass value="0.0330237440566374" />
+      <inertia ixx="3.21932845865315E-06" ixy="-3.90938640790905E-08" ixz="1.49256683003653E-07" iyy="4.58201123626057E-06" iyz="9.53803375200377E-08" izz="2.97750215584306E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_1" type="revolute">
+    <origin xyz="0.0017 0.028 0.08365" rpy="3.1416 -1.5708 0" />
+    <parent link="link_base" />
+    <child link="link_2_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.8377580409572782" upper="0.2617993877991494" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_2_2">
+    <inertial>
+      <origin xyz="0.0195721047160479 -6.375078510229E-09 -3.7786105663639E-05" rpy="0 0 0" />
+      <mass value="0.0234819993216375" />
+      <inertia ixx="1.15346729846515E-06" ixy="-1.36460050934579E-12" ixz="2.54201541705568E-07" iyy="3.13582644610358E-06" iyz="-2.57170886261006E-12" izz="2.88575134185038E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_2" type="revolute">
+    <origin xyz="0.02415 0 0.0126" rpy="-1.5708 0 0" />
+    <parent link="link_2_1" />
+    <child link="link_2_2" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="2.199114857512855" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_2_3">
+    <inertial>
+      <origin xyz="0.0195558884716151 -0.00109207440534333 0.000356987463228476" rpy="0 0 0" />
+      <mass value="0.0231440979990782" />
+      <inertia ixx="1.21670903805191E-06" ixy="3.92226401645322E-07" ixz="1.55591884623091E-07" iyy="3.22725436210729E-06" iyz="-9.01842459226463E-09" izz="2.97479144206893E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_3" type="revolute">
+    <origin xyz="0.0334 0 0" rpy="3.1416 0 0" />
+    <parent link="link_2_2" />
+    <child link="link_2_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_2_tip">
+    <inertial>
+      <origin xyz="0.00716859317915583 0.00377050100739501 1.70788388917376E-08" rpy="0 0 0" />
+      <mass value="0.00210248842337889" />
+      <inertia ixx="5.55807619588208E-08" ixy="5.95805898458942E-09" ixz="-9.12573308405952E-13" iyy="8.59766153844839E-08" iyz="-7.77736702690255E-14" izz="5.28586448422452E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_2_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_tip" type="fixed">
+    <origin xyz="0.02776 0.0034211 0" rpy="0 0 0.62832" />
+    <parent link="link_2_3" />
+    <child link="link_2_tip" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="link_3_1">
+    <inertial>
+      <origin xyz="0.0198782124274925 0.000277091705545252 0.000891766696284684" rpy="0 0 0" />
+      <mass value="0.0330237440566374" />
+      <inertia ixx="3.21932845865315E-06" ixy="-3.90938640790904E-08" ixz="1.49256683003655E-07" iyy="4.58201123626058E-06" iyz="9.53803375200385E-08" izz="2.97750215584307E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3_1" type="revolute">
+    <origin xyz="0.0017 0.005 0.08865" rpy="3.1416 -1.5708 0" />
+    <parent link="link_base" />
+    <child link="link_3_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.5759586531581288" upper="0.7330382858376184" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_3_2">
+    <inertial>
+      <origin xyz="0.0195721047154933 -6.67108564916807E-09 -3.77863928845215E-05" rpy="0 0 0" />
+      <mass value="0.0234819993216375" />
+      <inertia ixx="1.15346730592593E-06" ixy="-1.33461948628778E-12" ixz="2.54201567126818E-07" iyy="3.13582644610362E-06" iyz="-2.57555336978945E-12" izz="2.88575133438956E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3_2" type="revolute">
+    <origin xyz="0.02415 0 0.0126" rpy="-1.5708 0 0" />
+    <parent link="link_3_1" />
+    <child link="link_3_2" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="2.2689280275926285" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_3_3">
+    <inertial>
+      <origin xyz="0.0195558883470618 0.00109207460132425 -0.000356987361344927" rpy="0 0 0" />
+      <mass value="0.0231440972990701" />
+      <inertia ixx="1.21670899157702E-06" ixy="-3.9222641511746E-07" ixz="-1.55591885074845E-07" iyy="3.22725428525617E-06" iyz="-9.01843670118177E-09" izz="2.97479145274596E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3_3" type="revolute">
+    <origin xyz="0.0334 0 0" rpy="-3.1416 0 0" />
+    <parent link="link_3_2" />
+    <child link="link_3_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_3_tip">
+    <inertial>
+      <origin xyz="0.00716859317915589 0.00377050100739501 1.70788388726556E-08" rpy="0 0 0" />
+      <mass value="0.00210248842337888" />
+      <inertia ixx="5.55807619588206E-08" ixy="5.95805898458966E-09" ixz="-9.12573308430032E-13" iyy="8.59766153844838E-08" iyz="-7.77736702298946E-14" izz="5.28586448422453E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_3_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3_tip" type="fixed">
+    <origin xyz="0.02776 0.0034211 0" rpy="0 0 0.62832" />
+    <parent link="link_3_3" />
+    <child link="link_3_tip" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="link_4_1">
+    <inertial>
+      <origin xyz="0.0198782124274925 0.000277091705545261 0.000891766696284677" rpy="0 0 0" />
+      <mass value="0.0330237440566374" />
+      <inertia ixx="3.21932845865315E-06" ixy="-3.90938640790897E-08" ixz="1.49256683003654E-07" iyy="4.58201123626058E-06" iyz="9.53803375200376E-08" izz="2.97750215584307E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_4_1" type="revolute">
+    <origin xyz="0.0013 -0.018 0.08065" rpy="3.1416 -1.5708 0" />
+    <parent link="link_base" />
+    <child link="link_4_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.20943951023931956" upper="0.8377580409572782" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_4_2">
+    <inertial>
+      <origin xyz="0.0195721042534886 -6.35657193374939E-09 -3.77860376519316E-05" rpy="0 0 0" />
+      <mass value="0.0234819976154512" />
+      <inertia ixx="1.15346726867306E-06" ixy="-1.36654628575172E-12" ixz="2.54201514966745E-07" iyy="3.13582627828101E-06" iyz="-2.60795774687433E-12" izz="2.88575128883981E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_4_2" type="revolute">
+    <origin xyz="0.02415 0 0.0126" rpy="-1.5708 0 0" />
+    <parent link="link_4_1" />
+    <child link="link_4_2" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="2.2165681500327987" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_4_3">
+    <inertial>
+      <origin xyz="0.0195558882080176 -0.00109207330237117 0.00035698582975309" rpy="0 0 0" />
+      <mass value="0.0231440920335793" />
+      <inertia ixx="1.21670866874031E-06" ixy="3.92226377117157E-07" ixz="1.55591924078116E-07" iyy="3.2272540965841E-06" iyz="-9.01859319730548E-09" izz="2.97479132212353E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_4_3" type="revolute">
+    <origin xyz="0.0334 0 0" rpy="3.1416 0 0" />
+    <parent link="link_4_2" />
+    <child link="link_4_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_4_tip">
+    <inertial>
+      <origin xyz="0.00716859200908843 0.00377050076971339 1.93185949702579E-08" rpy="0 0 0" />
+      <mass value="0.00210248742685684" />
+      <inertia ixx="5.55807270342507E-08" ixy="5.95804961447344E-09" ixz="-8.99662584290253E-13" iyy="8.59765641581367E-08" iyz="-8.5949174962087E-14" izz="5.28586167580916E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_4_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_4_tip" type="fixed">
+    <origin xyz="0.02776 0.0034211 0" rpy="0 0 0.62832" />
+    <parent link="link_4_3" />
+    <child link="link_4_tip" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="link_5_1">
+    <inertial>
+      <origin xyz="0.0214521179762998 -0.00296674114776006 0.0105249689530762" rpy="0 0 0" />
+      <mass value="0.0714341385219276" />
+      <inertia ixx="1.82984681162451E-05" ixy="-2.0871730348731E-07" ixz="-1.43057390382226E-06" iyy="1.66711143784086E-05" iyz="8.18232089725759E-07" izz="8.823304400008E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_5_1" type="revolute">
+    <origin xyz="0.013 -0.01805 0.0364" rpy="0 0 -1.5708" />
+    <parent link="link_base" />
+    <child link="link_5_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.0471975511965976" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_5_2">
+    <inertial>
+      <origin xyz="0.000569863810141111 -0.0136000040565426 -0.000569863044482614" rpy="0 0 0" />
+      <mass value="0.0144987730585103" />
+      <inertia ixx="1.25775758156641E-06" ixy="1.06399727576712E-07" ixz="-4.70803959469914E-09" iyy="8.62292236377467E-07" iyz="1.0640017332601E-07" izz="1.25775949305173E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_5_2" type="revolute">
+    <origin xyz="0.02445 0 0.0307" rpy="-1.5708 0 0" />
+    <parent link="link_5_1" />
+    <child link="link_5_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.6457718232379019" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_5_3">
+    <inertial>
+      <origin xyz="0.0220629907941662 -0.000689392996479009 -0.000249558169742224" rpy="0 0 0" />
+      <mass value="0.0366614716134286" />
+      <inertia ixx="1.77190252479703E-06" ixy="6.04339737909764E-07" ixz="-1.73819768554048E-07" iyy="8.61144851165441E-06" iyz="6.31089230403293E-09" izz="8.43643936889104E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_5_3" type="revolute">
+    <origin xyz="0 -0.0272 0" rpy="1.5708 0 -1.5708" />
+    <parent link="link_5_2" />
+    <child link="link_5_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="7.5" velocity="3.141592653589793" />
+  </joint>
+  <link name="link_5_tip">
+    <inertial>
+      <origin xyz="0.00716859200912459 0.00377050076972391 1.93185855645872E-08" rpy="0 0 0" />
+      <mass value="0.00210248742687095" />
+      <inertia ixx="5.55807270343357E-08" ixy="5.95804961436044E-09" ixz="-8.99662485258025E-13" iyy="8.59765641586069E-08" iyz="-8.59491353950854E-14" izz="5.28586167585785E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/dg5fs_15dof_right/link_5_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_5_tip" type="fixed">
+    <origin xyz="0.03866 0.0034211 0" rpy="0 0 0.62832" />
+    <parent link="link_5_3" />
+    <child link="link_5_tip" />
+    <axis xyz="0 0 0" />
+  </joint>
+</robot>
