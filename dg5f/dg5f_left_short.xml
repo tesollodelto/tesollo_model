@@ -1,0 +1,155 @@
+<!--
+    dg5f_left_short.xml
+    Licensed under the BSD-3-Clause
+    Copyright (c) 2026 Tesollo Inc.
+    See LICENSE file for details.
+
+    Reference:
+    * https://tesollo.com/dg-5f/
+-->
+
+<mujoco model="dg5f_left_short">
+  <compiler angle="radian" meshdir="meshes"/>
+
+  <asset>
+    <mesh name="ll_dg_s_mount_c" content_type="model/stl" file="dg5f_left_short/ll_dg_s_mount_c.STL"/>
+    <mesh name="ll_dg_s_base_c" content_type="model/stl" file="dg5f_left_short/ll_dg_s_base_c.STL"/>
+    <mesh name="ll_dg_palm_c" content_type="model/stl" file="dg5f_left_short/ll_dg_palm_c.STL"/>
+    <mesh name="ll_dg_1_1_c" content_type="model/stl" file="dg5f_left_short/ll_dg_1_1_c.STL"/>
+    <mesh name="ll_dg_1_2_c" content_type="model/stl" file="dg5f_left_short/ll_dg_1_2_c.STL"/>
+    <mesh name="ll_dg_1_3_c" content_type="model/stl" file="dg5f_left_short/ll_dg_1_3_c.STL"/>
+    <mesh name="ll_dg_1_4_c" content_type="model/stl" file="dg5f_left_short/ll_dg_1_4_c.STL"/>
+    <mesh name="ll_dg_1_tip_c" content_type="model/stl" file="dg5f_left_short/ll_dg_1_tip_c.STL"/>
+    <mesh name="ll_dg_2_1_c" content_type="model/stl" file="dg5f_left_short/ll_dg_2_1_c.STL"/>
+    <mesh name="ll_dg_2_2_c" content_type="model/stl" file="dg5f_left_short/ll_dg_2_2_c.STL"/>
+    <mesh name="ll_dg_2_3_c" content_type="model/stl" file="dg5f_left_short/ll_dg_2_3_c.STL"/>
+    <mesh name="ll_dg_2_4_c" content_type="model/stl" file="dg5f_left_short/ll_dg_2_4_c.STL"/>
+    <mesh name="ll_dg_2_tip_c" content_type="model/stl" file="dg5f_left_short/ll_dg_2_tip_c.STL"/>
+    <mesh name="ll_dg_3_1_c" content_type="model/stl" file="dg5f_left_short/ll_dg_3_1_c.STL"/>
+    <mesh name="ll_dg_3_2_c" content_type="model/stl" file="dg5f_left_short/ll_dg_3_2_c.STL"/>
+    <mesh name="ll_dg_3_3_c" content_type="model/stl" file="dg5f_left_short/ll_dg_3_3_c.STL"/>
+    <mesh name="ll_dg_3_4_c" content_type="model/stl" file="dg5f_left_short/ll_dg_3_4_c.STL"/>
+    <mesh name="ll_dg_3_tip_c" content_type="model/stl" file="dg5f_left_short/ll_dg_3_tip_c.STL"/>
+    <mesh name="ll_dg_4_1_c" content_type="model/stl" file="dg5f_left_short/ll_dg_4_1_c.STL"/>
+    <mesh name="ll_dg_4_2_c" content_type="model/stl" file="dg5f_left_short/ll_dg_4_2_c.STL"/>
+    <mesh name="ll_dg_4_3_c" content_type="model/stl" file="dg5f_left_short/ll_dg_4_3_c.STL"/>
+    <mesh name="ll_dg_4_4_c" content_type="model/stl" file="dg5f_left_short/ll_dg_4_4_c.STL"/>
+    <mesh name="ll_dg_4_tip_c" content_type="model/stl" file="dg5f_left_short/ll_dg_4_tip_c.STL"/>
+    <mesh name="ll_dg_5_1_c" content_type="model/stl" file="dg5f_left_short/ll_dg_5_1_c.STL"/>
+    <mesh name="ll_dg_5_2_c" content_type="model/stl" file="dg5f_left_short/ll_dg_5_2_c.STL"/>
+    <mesh name="ll_dg_5_3_c" content_type="model/stl" file="dg5f_left_short/ll_dg_5_3_c.STL"/>
+    <mesh name="ll_dg_5_4_c" content_type="model/stl" file="dg5f_left_short/ll_dg_5_4_c.STL"/>
+    <mesh name="ll_dg_5_tip_c" content_type="model/stl" file="dg5f_left_short/ll_dg_5_tip_c.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" mesh="ll_dg_s_mount_c"/>
+    <geom pos="0 0 0.0045" quat="1 0 0 0" type="mesh" mesh="ll_dg_s_base_c"/>
+    <geom pos="0 0 0.0265" quat="1 0 0 0" type="mesh" mesh="ll_dg_palm_c"/>
+    <body name="ll_dg_1_1" pos="-0.0162 -0.019 0.0393">
+      <inertial pos="0.021473 3.1163e-06 0.0028146" quat="0.414969 0.572521 0.572945 0.414433" mass="0.0482" diaginertia="1.3718e-05 1.31155e-05 3.31624e-06"/>
+      <joint name="lj_dg_1_1" pos="0 0 0" axis="1 0 0" range="-1.3439 0.383972" actuatorfrcrange="-7.5 7.5"/>
+      <geom type="mesh" mesh="ll_dg_1_1_c"/>
+      <body name="ll_dg_1_2" pos="0.04195 0 0">
+        <inertial pos="-0.00055633 -0.0155 0.00055633" quat="0.59634 0.690357 -0.379972 0.152995" mass="0.0164" diaginertia="2.07162e-06 1.99661e-06 1.37777e-06"/>
+        <joint name="lj_dg_1_2" pos="0 0 0" axis="0 0 1" range="0 2.70526" actuatorfrcrange="-7.5 7.5"/>
+        <geom type="mesh" mesh="ll_dg_1_2_c"/>
+        <body name="ll_dg_1_3" pos="0 -0.031 0">
+          <inertial pos="-2.3008e-05 -0.014842 4.7446e-06" quat="0.525398 0.474739 -0.523748 0.473568" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+          <joint name="lj_dg_1_3" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+          <geom type="mesh" mesh="ll_dg_1_3_c"/>
+          <body name="ll_dg_1_4" pos="0 -0.0388 0">
+            <inertial pos="0.000184516 -0.0145343 0.000623981" quat="0.475299 0.555303 -0.521065 0.440705" mass="0.0555" diaginertia="2.07673e-05 2.04139e-05 3.29867e-06"/>
+            <joint name="lj_dg_1_4" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+            <geom type="mesh" mesh="ll_dg_1_4_c"/>
+            <geom pos="0 -0.0363 0" quat="0 0 0 1" type="mesh" mesh="ll_dg_1_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ll_dg_2_1" pos="-0.0071 -0.027 0.0926">
+      <inertial pos="0.0010606 -0.00058566 0.023499" quat="0.666108 0.307837 0.308411 0.605327" mass="0.0546" diaginertia="9.54523e-06 7.99297e-06 5.6344e-06"/>
+      <joint name="lj_dg_2_1" pos="0 0 0" axis="1 0 0" range="-0.349066 0.541052" actuatorfrcrange="-7.5 7.5"/>
+      <geom type="mesh" mesh="ll_dg_2_1_c"/>
+      <body name="ll_dg_2_2" pos="0.01765 0 0.0265">
+        <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+        <joint name="lj_dg_2_2" pos="0 0 0" axis="0 1 0" range="0 2.00713" actuatorfrcrange="-7.5 7.5"/>
+        <geom type="mesh" mesh="ll_dg_2_2_c"/>
+        <body name="ll_dg_2_3" pos="0 0 0.0388">
+          <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+          <joint name="lj_dg_2_3" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+          <geom type="mesh" mesh="ll_dg_2_3_c"/>
+          <body name="ll_dg_2_4" pos="0 0 0.0388">
+            <inertial pos="6.45659e-06 -0.00367246 0.0161491" quat="0.526727 0.843736 -0.0138979 0.102352" mass="0.0316" diaginertia="6.61901e-06 5.26294e-06 2.60249e-06"/>
+            <joint name="lj_dg_2_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+            <geom type="mesh" mesh="ll_dg_2_4_c"/>
+            <geom pos="0 0 0.0255" quat="1 0 0 0" type="mesh" mesh="ll_dg_2_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ll_dg_3_1" pos="-0.0071 -0.0025 0.0966">
+      <inertial pos="0.0012558 -0.00017703 0.023374" quat="0.648691 0.313074 0.303523 0.623746" mass="0.0526" diaginertia="9.33725e-06 7.69718e-06 5.31337e-06"/>
+      <joint name="lj_dg_3_1" pos="0 0 0" axis="1 0 0" range="-0.436332 0.436332" actuatorfrcrange="-7.5 7.5"/>
+      <geom type="mesh" mesh="ll_dg_3_1_c"/>
+      <body name="ll_dg_3_2" pos="0.01765 0 0.0265">
+        <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+        <joint name="lj_dg_3_2" pos="0 0 0" axis="0 1 0" range="0 2.00713" actuatorfrcrange="-7.5 7.5"/>
+        <geom type="mesh" mesh="ll_dg_3_2_c"/>
+        <body name="ll_dg_3_3" pos="0 0 0.0388">
+          <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+          <joint name="lj_dg_3_3" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+          <geom type="mesh" mesh="ll_dg_3_3_c"/>
+          <body name="ll_dg_3_4" pos="0 0 0.0388">
+            <inertial pos="6.45659e-06 -0.00367246 0.0161491" quat="0.526727 0.843736 -0.0138979 0.102352" mass="0.0316" diaginertia="6.61901e-06 5.26294e-06 2.60249e-06"/>
+            <joint name="lj_dg_3_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+            <geom type="mesh" mesh="ll_dg_3_4_c"/>
+            <geom pos="0 0 0.0255" quat="1 0 0 0" type="mesh" mesh="ll_dg_3_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ll_dg_4_1" pos="-0.0071 0.022 0.0886">
+      <inertial pos="0.001061 0.00024417 0.023499" quat="0.632598 0.317074 0.297256 0.641032" mass="0.0548" diaginertia="9.53287e-06 8.0012e-06 5.63792e-06"/>
+      <joint name="lj_dg_4_1" pos="0 0 0" axis="1 0 0" range="-0.558505 0.261799" actuatorfrcrange="-7.5 7.5"/>
+      <geom type="mesh" mesh="ll_dg_4_1_c"/>
+      <body name="ll_dg_4_2" pos="0.01765 0 0.0265">
+        <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+        <joint name="lj_dg_4_2" pos="0 0 0" axis="0 1 0" range="0 1.91986" actuatorfrcrange="-7.5 7.5"/>
+        <geom type="mesh" mesh="ll_dg_4_2_c"/>
+        <body name="ll_dg_4_3" pos="0 0 0.0388">
+          <inertial pos="-4.7446e-06 2.3008e-05 0.023958" quat="0.998727 0.0504191 0.000239574 0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+          <joint name="lj_dg_4_3" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+          <geom type="mesh" mesh="ll_dg_4_3_c"/>
+          <body name="ll_dg_4_4" pos="0 0 0.0388">
+            <inertial pos="6.45659e-06 -0.00367246 0.0161491" quat="0.526727 0.843736 -0.0138979 0.102352" mass="0.0316" diaginertia="6.61901e-06 5.26294e-06 2.60249e-06"/>
+            <joint name="lj_dg_4_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+            <geom type="mesh" mesh="ll_dg_4_4_c"/>
+            <geom pos="0 0 0.0255" quat="1 0 0 0" type="mesh" mesh="ll_dg_4_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ll_dg_5_1" pos="0.0103 0.0195 0.0447">
+      <inertial pos="-0.0045287 0.025016 0.014025" quat="0.476613 -0.146609 0.0894555 0.862174" mass="0.0744" diaginertia="2.5688e-05 2.34482e-05 9.43772e-06"/>
+      <joint name="lj_dg_5_1" pos="0 0 0" axis="0 0 1" range="-1.0472 0" actuatorfrcrange="-7.5 7.5"/>
+      <geom type="mesh" mesh="ll_dg_5_1_c"/>
+      <body name="ll_dg_5_2" pos="0 0.028 0.0381">
+        <inertial pos="0.00055633 0.00055633 0.0155" quat="0.376865 -0.160497 0.0664802 0.909832" mass="0.0164" diaginertia="2.07162e-06 1.99661e-06 1.37777e-06"/>
+        <joint name="lj_dg_5_2" pos="0 0 0" axis="1 0 0" range="-1.5708 0.261799" actuatorfrcrange="-7.5 7.5"/>
+        <geom type="mesh" mesh="ll_dg_5_2_c"/>
+        <body name="ll_dg_5_3" pos="0 0 0.031">
+          <inertial pos="4.7446e-06 2.3008e-05 0.014842" quat="0.998727 -0.0504191 0.000239574 -0.00141058" mass="0.0362" diaginertia="6.4181e-06 6.01585e-06 2.42154e-06"/>
+          <joint name="lj_dg_5_3" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+          <geom type="mesh" mesh="ll_dg_5_3_c"/>
+          <body name="ll_dg_5_4" pos="0 0 0.0388">
+            <inertial pos="1.06838e-05 -0.00345659 0.0177447" quat="0.946076 -0.319634 -0.0408876 0.0332032" mass="0.0555" diaginertia="1.67856e-05 1.1938e-05 7.55643e-06"/>
+            <joint name="lj_dg_5_4" pos="0 0 0" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-7.5 7.5"/>
+            <geom type="mesh" mesh="ll_dg_5_4_c"/>
+            <geom pos="0 0 0.0363" quat="1 0 0 0" type="mesh" mesh="ll_dg_5_tip_c"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
