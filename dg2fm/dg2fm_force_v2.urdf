@@ -1,0 +1,323 @@
+<!--
+    dg2fm_force_v2.urdf
+    Licensed under the BSD-3-Clause
+    Copyright (c) 2019-2026 Tesollo Inc.
+    See LICENSE file for details.
+
+    Reference:
+    * https://www.tesollo.com/products/grippers/dg-2f
+-->
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="dg2fm_force_v2">
+  <link name="link_mount">
+    <inertial>
+      <origin xyz="2.1443E-05 -9.2971E-10 0.0050352" rpy="0 0 0" />
+      <mass value="0.022" />
+      <inertia ixx="4.0976E-06" ixy="1.415E-13" ixz="-1.4802E-09" iyy="4.0904E-06" iyz="2.629E-14" izz="7.6318E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_mount.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_mount.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_base">
+    <inertial>
+      <origin xyz="-0.000387279118995667 3.85821004457669E-05 0.0413973195029413" rpy="0 0 0" />
+      <mass value="0.274913324124414" />
+      <inertia ixx="0.000123579994158363" ixy="-2.98047590467429E-07" ixz="-4.19579347404301E-07" iyy="0.000124294440150551" iyz="5.30289229088882E-09" izz="0.000167082387563003" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_base.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_base" type="fixed">
+    <origin xyz="0 0 0.004" rpy="0 0 0" />
+    <parent link="link_mount" />
+    <child link="link_base" />
+  </joint>
+
+  <link name="link_1_1">
+    <inertial>
+      <origin xyz="0.0132580158717576 -0.000218120950403102 -0.0131408031088283" rpy="0 0 0" />
+      <mass value="0.011" />
+      <inertia ixx="2.19362568138145E-06" ixy="3.45478819757966E-08" ixz="2.88819044915745E-07" iyy="2.23542868095477E-06" iyz="-2.66715021816441E-08" izz="8.19068644312156E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_1" type="revolute">
+    <origin xyz="0.01905 0 0.08176" rpy="0 -1.5708 0" />
+    <parent link="link_base" />
+    <child link="link_1_1" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+
+  <link name="link_1_2">
+    <inertial>
+      <origin xyz="0.0153615784003888 -2.65380591455006E-05 0.00010721551662414" rpy="0 0 0" />
+      <mass value="0.014" />
+      <inertia ixx="9.94637785301132E-07" ixy="8.45227504885404E-09" ixz="-1.30426301492852E-07" iyy="2.9068734661645E-06" iyz="1.51355367433403E-09" izz="2.66979118413059E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <origin xyz="0.029 0 -0.0241" rpy="1.5708 1.5708 0" />
+    <parent link="link_1_1" />
+    <child link="link_1_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.0" upper="3.1066860685499065" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+  
+  <link name="link_1_3">
+    <inertial>
+      <origin xyz="0.0138070386779118 -8.92464643853508E-10 -0.00016756154892549" rpy="0 0 0" />
+      <mass value="0.014" />
+      <inertia ixx="8.97788921752011E-07" ixy="-7.80875003253493E-14" ixz="-3.11260862667934E-08" iyy="2.10082452029784E-06" iyz="-4.51185657289497E-13" izz="2.00412646884277E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_3" type="revolute">
+    <origin xyz="0.0434 0 0" rpy="0 0 0" />
+    <parent link="link_1_2" />
+    <child link="link_1_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.8325957145940461" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+  
+  <link name="link_1_tip">
+    <inertial>
+      <origin xyz="0.00811374290639798 -0.00153597522703877 3.86327296487071E-08" rpy="0 0 0" />
+      <mass value="0.00510044630675642" />
+      <inertia ixx="3.48493186601044E-07" ixy="6.17158764494744E-08" ixz="9.0595573662644E-12" iyy="3.64864500936702E-07" iyz="-1.23355886335909E-11" izz="3.04297959452237E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_tip" type="fixed">
+    <origin xyz="0.0313 0 0" rpy="0 0 0" />
+    <parent link="link_1_3" />
+    <child link="link_1_tip" />
+  </joint>
+
+  <link name="link_1_sensor">
+    <inertial>
+      <origin xyz="-0.00326170276861056 -1.14936723160611E-07 0.00596673223973646" rpy="0 0 0" />
+      <mass value="0.003" />
+      <inertia ixx="1.63157554313604E-07" ixy="2.68480209283172E-12" ixz="1.10947858005365E-08" iyy="1.48708161092665E-07" iyz="-3.87835144717017E-14" izz="2.42131418010143E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_sensor.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_sensor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1_sensor" type="fixed">
+    <origin xyz="0.025417 0.0049551 0" rpy="1.5708 0 -0.69813" />
+    <parent link="link_1_tip" />
+    <child link="link_1_sensor" />
+  </joint>
+
+
+  <link name="link_2_1">
+    <inertial>
+      <origin xyz="0.0132580158717576 -0.000218120950403102 -0.0131408031088283" rpy="0 0 0" />
+      <mass value="0.011" />
+      <inertia ixx="2.19362568138145E-06" ixy="3.45478819757966E-08" ixz="2.88819044915745E-07" iyy="2.23542868095477E-06" iyz="-2.66715021816441E-08" izz="8.19068644312156E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_1" type="revolute">
+    <origin xyz="-0.01905 0 0.08176" rpy="3.1416 -1.5708 0" />
+    <parent link="link_base" />
+    <child link="link_2_1" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+
+  <link name="link_2_2">
+    <inertial>
+      <origin xyz="0.0153615784003888 -2.65380591455006E-05 0.00010721551662414" rpy="0 0 0" />
+      <mass value="0.014" />
+      <inertia ixx="9.94637785301132E-07" ixy="8.45227504885404E-09" ixz="-1.30426301492852E-07" iyy="2.9068734661645E-06" iyz="1.51355367433403E-09" izz="2.66979118413059E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_2" type="revolute">
+    <origin xyz="0.029 0 -0.0241" rpy="1.5708 1.5708 0" />
+    <parent link="link_2_1" />
+    <child link="link_2_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.0" upper="3.1066860685499065" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+  
+  <link name="link_2_3">
+    <inertial>
+      <origin xyz="0.0138070386779118 -8.92464643853508E-10 -0.00016756154892549" rpy="0 0 0" />
+      <mass value="0.014" />
+      <inertia ixx="8.97788921752011E-07" ixy="-7.80875003253493E-14" ixz="-3.11260862667934E-08" iyy="2.10082452029784E-06" iyz="-4.51185657289497E-13" izz="2.00412646884277E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_3" type="revolute">
+    <origin xyz="0.0434 0 0" rpy="0 0 0" />
+    <parent link="link_2_2" />
+    <child link="link_2_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.8325957145940461" effort="10.0" velocity="7.853981633974483" />
+  </joint>
+  
+  <link name="link_2_tip">
+    <inertial>
+      <origin xyz="0.00811374290639798 -0.00153597522703877 3.86327296487071E-08" rpy="0 0 0" />
+      <mass value="0.00510044630675642" />
+      <inertia ixx="3.48493186601044E-07" ixy="6.17158764494744E-08" ixz="9.0595573662644E-12" iyy="3.64864500936702E-07" iyz="-1.23355886335909E-11" izz="3.04297959452237E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_tip.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_tip" type="fixed">
+    <origin xyz="0.0313 0 0" rpy="0 0 0" />
+    <parent link="link_2_3" />
+    <child link="link_2_tip" />
+  </joint>
+
+  <link name="link_2_sensor">
+    <inertial>
+      <origin xyz="-0.00326170276861056 -1.14936723160611E-07 0.00596673223973646" rpy="0 0 0" />
+      <mass value="0.003" />
+      <inertia ixx="1.63157554313604E-07" ixy="2.68480209283172E-12" ixz="1.10947858005365E-08" iyy="1.48708161092665E-07" iyz="-3.87835144717017E-14" izz="2.42131418010143E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_sensor.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link_sensor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2_sensor" type="fixed">
+    <origin xyz="0.025417 0.0049551 0" rpy="1.5708 0 -0.69813" />
+    <parent link="link_2_tip" />
+    <child link="link_2_sensor" />
+  </joint>
+
+
+</robot>
