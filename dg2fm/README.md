@@ -1,8 +1,9 @@
 ## 👋 DG2F-M
 
-<p align="center">
-  <img src="images/dg2fm_force_v2.png" width="1200" alt="DG2F-M-FORCE-V2">
-</p>
+| Sim | Real |
+| :---: | :---: |
+| ![Sim Robot](images/dg2fm_force_v2.png) | ![Real Robot](images/dg2fm_force_v2_real.png) |
+| *DG2FM (Sim)* | *DG2FM (Real)* |
 
 This directory contains the 3D models and simulation configuration files for the **DG2F-M**.
 ### 📁 Directory Structure & Supported Formats
