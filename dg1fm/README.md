@@ -3,9 +3,9 @@
 | Sim |
 | :---: |
 | <img src="images/dg1fm.png" width="400px"> |
-| *DG1FM (Sim)* |
+| *DG1FM* |
 
-This directory contains the 3D models and simulation configuration files for the **DG2F-M**.
+This directory contains the 3D models and simulation configuration files for the **DG1F-M**.
 ### 📁 Directory Structure & Supported Formats
 
 #### 1. Meshes (`.stl`, `.dae`)
