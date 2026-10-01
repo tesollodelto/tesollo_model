@@ -3,6 +3,7 @@
 #### 📂 Repository Structure
 The repository is organized by model series, containing the necessary assets and physics configurations for each gripper/hand.
 
+* `dg1fm/: Models for the DG-1F-M series (3 DOF).`
 * `dg2fm/: Models for the DG-2F-M series (6 DOF).`
 * `dg3fm/: Models for the DG-3F-M series (12 DOF).`
 * `dg4f/: Models for the DG-4F series (18 DOF).`
