@@ -1,7 +1,6 @@
+# TESOLLO Robot Models – URDF, USD, XML
 
-# Tesollo Robot Models – URDF, USD, XML
-
-Robot model resources for Tesollo robotic grippers and dexterous robotic hands.
+Robot model resources for TESOLLO robotic grippers and dexterous robotic hands.
 
 This repository provides robot model assets, including URDF, USD, and XML formats where available, to support robotics simulation, visualization, motion planning, and system integration.
 
@@ -11,11 +10,11 @@ The repository is organized by product series, containing model assets and physi
 
 | Model | Degrees of Freedom | Directory |
 |---|---|---|
-| DG-1F-M | 3 DoF | [dg1fm](./dg1fm) |
-| DG-2F-M | 6 DoF | [dg2fm](./dg2fm) |
+| DG-1F | 3 DoF | [dg1fm](./dg1fm) |
+| DG-2F | 6 DoF | [dg2fm](./dg2fm) |
 | DG-3F-M | 12 DoF | [dg3fm](./dg3fm) |
 | DG-4F | 18 DoF | [dg4f](./dg4f) |
-| DG-5F Series | 20 DoF | [dg5f](./dg5f) |
+| DG-5F-M | 20 DoF | [dg5f](./dg5f) |
 | DG-5F-S | 20 DoF / 15 DoF | [dg5fs](./dg5fs) |
 
 ## Applications
@@ -46,7 +45,7 @@ For additional documentation, software packages, and integration guides:
 - [ROS 2 Integration Guide](https://tesollodelto.github.io/tesollo_ros2/)
 - [ROS 2 Drivers & Packages](https://github.com/tesollodelto/tesollo_ros2)
 - [Downloads & Developer Resources](https://www.tesollo.com/support/download)
-- [Tesollo Official Website](https://www.tesollo.com)
+- [TESOLLO Official Website](https://www.tesollo.com)
 
 ## License
 
