@@ -29,6 +29,10 @@ Standard robot model files for ROS and general-purpose robotics simulators.
 * `dg5fs_15dof_left_w_mount.urdf`
 * `dg5fs_15dof_right.urdf`
 * `dg5fs_15dof_right_w_mount.urdf`
+* `dg5fs_15dof_tactile_left.urdf`
+* `dg5fs_15dof_tactile_left_w_mount.urdf`
+* `dg5fs_15dof_tactile_right.urdf`
+* `dg5fs_15dof_tactile_right_w_mount.urdf`
 
 #### 3. MJCF (`.xml`)
 Model files optimized for the MuJoCo physics engine.
@@ -51,3 +55,7 @@ Ready-to-use USD files specifically configured for NVIDIA Isaac Sim and Isaac La
 * `usd/dg5fs_15dof_left_w_mount/dg5fs_15dof_left.usd`
 * `usd/dg5fs_15dof_right/dg5fs_15dof_right.usd`
 * `usd/dg5fs_15dof_right_w_mount/dg5fs_15dof_right.usd`
+* `usd/dg5fs_15dof_tactile_left/dg5fs_15dof_left.usd`
+* `usd/dg5fs_15dof_tactile_left_w_mount/dg5fs_15dof_left.usd`
+* `usd/dg5fs_15dof_tactile_right/dg5fs_15dof_right.usd`
+* `usd/dg5fs_15dof_tactile_right_w_mount/dg5fs_15dof_right.usd`
