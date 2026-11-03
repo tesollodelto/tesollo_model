@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
     dg2fm_force_v2.urdf
     Licensed under the BSD-3-Clause
@@ -9,7 +10,6 @@
 -->
 
 
-<?xml version="1.0" encoding="utf-8"?>
 <robot name="dg2fm_force_v2">
   <link name="link_mount">
     <inertial>
@@ -318,6 +318,4 @@
     <parent link="link_2_tip" />
     <child link="link_2_sensor" />
   </joint>
-
-
 </robot>
